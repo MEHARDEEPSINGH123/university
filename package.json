@@ -1,0 +1,31 @@
+{
+  "name": "university-website",
+  "version": "1.0.0",
+  "description": "A premium, production-ready commercial Education & Tuition Centre web platform built for Singapore's education landscape. Engineered to serve students, parents, working professionals, and corporate learners with Coursera / MasterClass / Great Learning grade visual credibility.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@types/node": "^26.6.2",
+    "@types/react": "^18.3.11",
+    "autoprefixer": "^10.6.1",
+    "chart.js": "^4.5.1",
+    "lucide-react": "^1.47.0",
+    "next": "^14.2.15",
+    "postcss": "^8.5.28",
+    "react": "^18.3.1",
+    "react-chartjs-2": "^5.3.1",
+    "react-dom": "^18.3.1",
+    "tailwindcss": "^3.4.14"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3"
+  }
+}
