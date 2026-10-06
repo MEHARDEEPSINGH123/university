@@ -350,16 +350,6 @@ export default function Modals() {
         ))}
       </div>
 
-      {/* Discreet Admissions Hotline Trigger */}
-      <div className="fixed bottom-6 right-6 z-40">
-        <button
-          onClick={openWhatsAppModal}
-          className="w-12 h-12 rounded-2xl bg-[#047857] text-white shadow-md flex items-center justify-center hover:bg-[#065F46] transition duration-150 border border-emerald-600"
-          aria-label="Admissions Hotline"
-        >
-          <Building className="w-5 h-5 text-white" />
-        </button>
-      </div>
     </>
   );
 }

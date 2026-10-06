@@ -23,6 +23,10 @@ interface AppContextType {
   openCertModal: (certId: string) => void;
   closeCertModal: () => void;
 
+  isChatbotOpen: boolean;
+  openChatbot: () => void;
+  closeChatbot: () => void;
+
   toasts: ToastItem[];
   showToast: (message: string, type?: 'success' | 'error' | 'info') => void;
   removeToast: (id: string) => void;
@@ -38,6 +42,27 @@ export function AppProvider({ children }: { children: ReactNode }) {
 
   const [certModalOpen, setCertModalOpen] = useState(false);
   const [selectedCertId, setSelectedCertId] = useState<string | null>(null);
+
+  const [isChatbotOpen, setIsChatbotOpen] = useState(false);
+
+  const openChatbot = () => {
+    setIsChatbotOpen(true);
+    if (typeof window !== 'undefined' && (window as any).DagsisChat) {
+      try {
+        if (typeof (window as any).DagsisChat.open === 'function') {
+          (window as any).DagsisChat.open();
+        } else if (typeof (window as any).DagsisChat.toggle === 'function') {
+          (window as any).DagsisChat.toggle();
+        }
+      } catch (err) {
+        console.error("Dagsis open error:", err);
+      }
+    }
+  };
+
+  const closeChatbot = () => {
+    setIsChatbotOpen(false);
+  };
 
   const [toasts, setToasts] = useState<ToastItem[]>([]);
 
@@ -88,6 +113,9 @@ export function AppProvider({ children }: { children: ReactNode }) {
         selectedCertId,
         openCertModal,
         closeCertModal,
+        isChatbotOpen,
+        openChatbot,
+        closeChatbot,
         toasts,
         showToast,
         removeToast,

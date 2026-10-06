@@ -5,6 +5,7 @@ import { AppProvider } from "@/context/AppContext";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Modals from "@/components/Modals";
+import Chatbot from "@/components/Chatbot";
 
 const merriweather = Merriweather({
   subsets: ["latin"],
@@ -50,6 +51,7 @@ export default function RootLayout({
           <main className="flex-grow">{children}</main>
           <Footer />
           <Modals />
+          <Chatbot />
         </AppProvider>
       </body>
     </html>
