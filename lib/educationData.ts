@@ -90,7 +90,7 @@ export interface CategoryInfo {
 }
 
 export const instituteInfo = {
-  "name": "Apex Institute of Singapore",
+  "name": "Dagsis University Dummy",
   "tagline": "Learn Skills That Shape Your Future",
   "subheadline": "Industry-recognized courses, expert trainers, flexible learning formats, and professional certifications.",
   "registration_no": "UEN: 201829481E (EduTrust Singapore Certified & CPE Registered)",
@@ -7267,11 +7267,11 @@ export const trainers: Trainer[] = [
 export const campuses: Campus[] = [
   {
     "id": "Orchard",
-    "name": "Orchard Central Flagship Campus",
-    "address": "Level 14 Orchard Gateway, 277 Orchard Road, Singapore 238858",
+    "name": "Orchard Flagship Main Campus",
+    "address": "123, Street ABC, State XYZ, Pin-000000",
     "mrt": "Somerset MRT (Direct Underpass, Exit B)",
-    "phone": "+65 6732 8890",
-    "email": "orchard@apex.edu.sg",
+    "phone": "+65 XXXXXXXXX",
+    "email": "admissions@dagsis.edu.sg",
     "hours": "Mon-Fri: 9:00 AM - 9:30 PM | Sat-Sun: 8:30 AM - 7:00 PM",
     "type": "Executive & STEM Flagship Hub",
     "image": "https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=600&q=80"
@@ -7279,10 +7279,10 @@ export const campuses: Campus[] = [
   {
     "id": "Tampines",
     "name": "Tampines Regional Academic Hub",
-    "address": "Level 4 Tampines One & Hub Link, 10 Tampines Central 1, Singapore 529536",
+    "address": "123, Street ABC, State XYZ, Pin-000000",
     "mrt": "Tampines MRT Interchange (Exit A)",
-    "phone": "+65 6788 4421",
-    "email": "tampines@apex.edu.sg",
+    "phone": "+65 XXXXXXXXX",
+    "email": "tampines@dagsis.edu.sg",
     "hours": "Mon-Fri: 9:00 AM - 9:00 PM | Sat-Sun: 8:30 AM - 6:30 PM",
     "type": "Primary & Secondary Excellence Centre",
     "image": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=600&q=80"
@@ -7290,10 +7290,10 @@ export const campuses: Campus[] = [
   {
     "id": "Jurong East",
     "name": "Jurong West Innovation Hub",
-    "address": "Level 11 JEM Office Tower, 50 Jurong Gateway Road, Singapore 608549",
+    "address": "123, Street ABC, State XYZ, Pin-000000",
     "mrt": "Jurong East MRT Interchange (Exit C, Link Bridge)",
-    "phone": "+65 6425 1198",
-    "email": "jurongeast@apex.edu.sg",
+    "phone": "+65 XXXXXXXXX",
+    "email": "jurongeast@dagsis.edu.sg",
     "hours": "Mon-Fri: 9:00 AM - 9:30 PM | Sat-Sun: 8:30 AM - 7:00 PM",
     "type": "Tech, AI & Data Science Hub",
     "image": "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=600&q=80"
@@ -7301,10 +7301,10 @@ export const campuses: Campus[] = [
   {
     "id": "Woodlands",
     "name": "Woodlands Civic Learning Centre",
-    "address": "Level 5 Woodlands Civic Centre, 900 South Woodlands Drive, Singapore 730900",
+    "address": "123, Street ABC, State XYZ, Pin-000000",
     "mrt": "Woodlands MRT (TEL / NSL Interchange Exit 3)",
-    "phone": "+65 6365 2209",
-    "email": "woodlands@apex.edu.sg",
+    "phone": "+65 XXXXXXXXX",
+    "email": "woodlands@dagsis.edu.sg",
     "hours": "Mon-Fri: 9:30 AM - 9:00 PM | Sat-Sun: 8:30 AM - 6:00 PM",
     "type": "O/A-Level & STEM Training Campus",
     "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80"
@@ -7312,10 +7312,10 @@ export const campuses: Campus[] = [
   {
     "id": "Punggol",
     "name": "Punggol Digital District Campus",
-    "address": "Level 3 Waterway Point West Wing, 83 Punggol Central, Singapore 828761",
+    "address": "123, Street ABC, State XYZ, Pin-000000",
     "mrt": "Punggol MRT/LRT Interchange",
-    "phone": "+65 6822 7741",
-    "email": "punggol@apex.edu.sg",
+    "phone": "+65 XXXXXXXXX",
+    "email": "punggol@dagsis.edu.sg",
     "hours": "Mon-Fri: 10:00 AM - 9:00 PM | Sat-Sun: 8:30 AM - 6:30 PM",
     "type": "Coding, Robotics & Junior Tech Academy",
     "image": "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=600&q=80"
@@ -7323,10 +7323,10 @@ export const campuses: Campus[] = [
   {
     "id": "Bishan",
     "name": "Bishan Central High-Scorers Hub",
-    "address": "Level 6 Junction 8 Office Tower, 9 Bishan Place, Singapore 579837",
+    "address": "123, Street ABC, State XYZ, Pin-000000",
     "mrt": "Bishan MRT Interchange (Circle & North-South Line)",
-    "phone": "+65 6358 3312",
-    "email": "bishan@apex.edu.sg",
+    "phone": "+65 XXXXXXXXX",
+    "email": "bishan@dagsis.edu.sg",
     "hours": "Mon-Fri: 9:00 AM - 9:30 PM | Sat-Sun: 8:30 AM - 7:00 PM",
     "type": "Academic Mastery & Olympiad Centre",
     "image": "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=600&q=80"
@@ -7334,10 +7334,10 @@ export const campuses: Campus[] = [
   {
     "id": "Novena",
     "name": "Novena Medical & STEM Hub",
-    "address": "Level 9 Royal Square @ Novena, 103 Irrawaddy Road, Singapore 329566",
+    "address": "123, Street ABC, State XYZ, Pin-000000",
     "mrt": "Novena MRT (Exit B, Sheltered Link)",
-    "phone": "+65 6250 9984",
-    "email": "novena@apex.edu.sg",
+    "phone": "+65 XXXXXXXXX",
+    "email": "novena@dagsis.edu.sg",
     "hours": "Mon-Fri: 9:30 AM - 9:00 PM | Sat-Sun: 8:30 AM - 6:00 PM",
     "type": "Data & Professional Analytics Centre",
     "image": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=600&q=80"
@@ -7345,10 +7345,10 @@ export const campuses: Campus[] = [
   {
     "id": "Bedok",
     "name": "Bedok Central Community Hub",
-    "address": "Level 3 Bedok Mall Commercial Wing, 311 New Upper Changi Road, Singapore 467360",
+    "address": "123, Street ABC, State XYZ, Pin-000000",
     "mrt": "Bedok MRT (Direct Mall Connection)",
-    "phone": "+65 6443 6610",
-    "email": "bedok@apex.edu.sg",
+    "phone": "+65 XXXXXXXXX",
+    "email": "bedok@dagsis.edu.sg",
     "hours": "Mon-Fri: 10:00 AM - 9:00 PM | Sat-Sun: 8:30 AM - 6:30 PM",
     "type": "Digital Skills & Academic Preparation",
     "image": "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=600&q=80"
@@ -7356,10 +7356,10 @@ export const campuses: Campus[] = [
   {
     "id": "Clementi",
     "name": "Clementi West Coast Tech Campus",
-    "address": "Level 4 Grantral Mall @ Clementi, 3151 Commonwealth Ave West, Singapore 129581",
+    "address": "123, Street ABC, State XYZ, Pin-000000",
     "mrt": "Clementi MRT (Exit A)",
-    "phone": "+65 6779 5501",
-    "email": "clementi@apex.edu.sg",
+    "phone": "+65 XXXXXXXXX",
+    "email": "clementi@dagsis.edu.sg",
     "hours": "Mon-Fri: 9:00 AM - 9:00 PM | Sat-Sun: 8:30 AM - 6:30 PM",
     "type": "Python, Cloud & Computing Campus",
     "image": "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=600&q=80"
@@ -7367,10 +7367,10 @@ export const campuses: Campus[] = [
   {
     "id": "City",
     "name": "Raffles City Corporate Campus",
-    "address": "Level 18 Raffles City Tower, 250 North Bridge Road, Singapore 179101",
+    "address": "123, Street ABC, State XYZ, Pin-000000",
     "mrt": "City Hall MRT Interchange (Underground Link)",
-    "phone": "+65 6338 1200",
-    "email": "city@apex.edu.sg",
+    "phone": "+65 XXXXXXXXX",
+    "email": "city@dagsis.edu.sg",
     "hours": "Mon-Fri: 8:30 AM - 9:30 PM | Sat: 9:00 AM - 5:00 PM",
     "type": "Corporate Upskilling & Executive Leadership",
     "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80"
@@ -7638,7 +7638,7 @@ export const certifications: Certification[] = [
     "name": "Certification 1",
     "industry_title": "Singapore MOE-Aligned PSLE Distinction Fellow",
     "category": "Data Analytics",
-    "issuing_body": "Apex Institute Singapore in partnership with Singapore Industry Boards",
+    "issuing_body": "Dagsis University Dummy in partnership with Singapore Industry Boards",
     "verification_code": "SG-APX-1000",
     "skills_validated": [
       "SQL",
@@ -7656,7 +7656,7 @@ export const certifications: Certification[] = [
     "name": "Certification 2",
     "industry_title": "Cambridge GCE O-Level Academic Excellence Diploma",
     "category": "Artificial Intelligence",
-    "issuing_body": "Apex Institute Singapore in partnership with Singapore Industry Boards",
+    "issuing_body": "Dagsis University Dummy in partnership with Singapore Industry Boards",
     "verification_code": "SG-APX-1047",
     "skills_validated": [
       "GenAI",
@@ -7674,7 +7674,7 @@ export const certifications: Certification[] = [
     "name": "Certification 3",
     "industry_title": "Cambridge GCE A-Level Higher Secondary Diploma",
     "category": "Machine Learning",
-    "issuing_body": "Apex Institute Singapore in partnership with Singapore Industry Boards",
+    "issuing_body": "Dagsis University Dummy in partnership with Singapore Industry Boards",
     "verification_code": "SG-APX-1094",
     "skills_validated": [
       "Scikit-Learn",
@@ -7691,7 +7691,7 @@ export const certifications: Certification[] = [
     "name": "Certification 4",
     "industry_title": "Junior STEM & Robotics Innovation Specialist",
     "category": "Cyber Security",
-    "issuing_body": "Apex Institute Singapore in partnership with Singapore Industry Boards",
+    "issuing_body": "Dagsis University Dummy in partnership with Singapore Industry Boards",
     "verification_code": "SG-APX-1141",
     "skills_validated": [
       "Network Security",
@@ -7708,7 +7708,7 @@ export const certifications: Certification[] = [
     "name": "Certification 5",
     "industry_title": "Certified Professional Python Developer (SSG Aligned)",
     "category": "Cloud Computing",
-    "issuing_body": "Apex Institute Singapore in partnership with Singapore Industry Boards",
+    "issuing_body": "Dagsis University Dummy in partnership with Singapore Industry Boards",
     "verification_code": "SG-APX-1188",
     "skills_validated": [
       "AWS Architecting",
@@ -7726,7 +7726,7 @@ export const certifications: Certification[] = [
     "name": "Certification 6",
     "industry_title": "Certified Enterprise Data Analytics Specialist",
     "category": "Python Programming",
-    "issuing_body": "Apex Institute Singapore in partnership with Singapore Industry Boards",
+    "issuing_body": "Dagsis University Dummy in partnership with Singapore Industry Boards",
     "verification_code": "SG-APX-1235",
     "skills_validated": [
       "Python 3.12",
@@ -7744,7 +7744,7 @@ export const certifications: Certification[] = [
     "name": "Certification 7",
     "industry_title": "Applied Artificial Intelligence & GenAI Practitioner",
     "category": "Digital Marketing",
-    "issuing_body": "Apex Institute Singapore in partnership with Singapore Industry Boards",
+    "issuing_body": "Dagsis University Dummy in partnership with Singapore Industry Boards",
     "verification_code": "SG-APX-1282",
     "skills_validated": [
       "Google Ads",
@@ -7761,7 +7761,7 @@ export const certifications: Certification[] = [
     "name": "Certification 8",
     "industry_title": "Professional Machine Learning Engineering Fellow",
     "category": "Business Analytics",
-    "issuing_body": "Apex Institute Singapore in partnership with Singapore Industry Boards",
+    "issuing_body": "Dagsis University Dummy in partnership with Singapore Industry Boards",
     "verification_code": "SG-APX-1329",
     "skills_validated": [
       "Financial Modeling",
@@ -7778,7 +7778,7 @@ export const certifications: Certification[] = [
     "name": "Certification 9",
     "industry_title": "Certified Cyber Security Defense & Operations Specialist",
     "category": "Coding & Robotics",
-    "issuing_body": "Apex Institute Singapore in partnership with Singapore Industry Boards",
+    "issuing_body": "Dagsis University Dummy in partnership with Singapore Industry Boards",
     "verification_code": "SG-APX-1376",
     "skills_validated": [
       "C++",
@@ -7795,7 +7795,7 @@ export const certifications: Certification[] = [
     "name": "Certification 10",
     "industry_title": "Certified Enterprise Cloud Architect (Multi-Cloud)",
     "category": "IELTS Preparation",
-    "issuing_body": "Apex Institute Singapore in partnership with Singapore Industry Boards",
+    "issuing_body": "Dagsis University Dummy in partnership with Singapore Industry Boards",
     "verification_code": "SG-APX-1423",
     "skills_validated": [
       "Academic Writing Task 1 & 2",
@@ -7811,7 +7811,7 @@ export const certifications: Certification[] = [
     "name": "Certification 11",
     "industry_title": "Certified Digital Marketing & Growth Strategist",
     "category": "PSLE Preparation",
-    "issuing_body": "Apex Institute Singapore in partnership with Singapore Industry Boards",
+    "issuing_body": "Dagsis University Dummy in partnership with Singapore Industry Boards",
     "verification_code": "SG-APX-1470",
     "skills_validated": [
       "Heuristic Problem Solving",
@@ -7827,7 +7827,7 @@ export const certifications: Certification[] = [
     "name": "Certification 12",
     "industry_title": "Certified Corporate Business Analytics Specialist",
     "category": "O-Level Preparation",
-    "issuing_body": "Apex Institute Singapore in partnership with Singapore Industry Boards",
+    "issuing_body": "Dagsis University Dummy in partnership with Singapore Industry Boards",
     "verification_code": "SG-APX-1517",
     "skills_validated": [
       "Pure Sciences Mastery",
@@ -7843,7 +7843,7 @@ export const certifications: Certification[] = [
     "name": "Certification 13",
     "industry_title": "Cambridge English Professional & Academic Fluency Diploma",
     "category": "A-Level Preparation",
-    "issuing_body": "Apex Institute Singapore in partnership with Singapore Industry Boards",
+    "issuing_body": "Dagsis University Dummy in partnership with Singapore Industry Boards",
     "verification_code": "SG-APX-1564",
     "skills_validated": [
       "H2 Subject Analysis",
@@ -7859,7 +7859,7 @@ export const certifications: Certification[] = [
     "name": "Certification 14",
     "industry_title": "Advanced Mathematics & Olympiad Heuristic Fellow",
     "category": "English",
-    "issuing_body": "Apex Institute Singapore in partnership with Singapore Industry Boards",
+    "issuing_body": "Dagsis University Dummy in partnership with Singapore Industry Boards",
     "verification_code": "SG-APX-1611",
     "skills_validated": [
       "Creative Composition",
@@ -7875,7 +7875,7 @@ export const certifications: Certification[] = [
     "name": "Certification 15",
     "industry_title": "Experimental Science & Laboratory Inquiry Diploma",
     "category": "Mathematics",
-    "issuing_body": "Apex Institute Singapore in partnership with Singapore Industry Boards",
+    "issuing_body": "Dagsis University Dummy in partnership with Singapore Industry Boards",
     "verification_code": "SG-APX-1658",
     "skills_validated": [
       "Model Drawing Method",
@@ -7892,7 +7892,7 @@ export const certifications: Certification[] = [
     "name": "Certification 16",
     "industry_title": "Higher Chinese Language & Literature Distinction Fellow",
     "category": "Science",
-    "issuing_body": "Apex Institute Singapore in partnership with Singapore Industry Boards",
+    "issuing_body": "Dagsis University Dummy in partnership with Singapore Industry Boards",
     "verification_code": "SG-APX-1705",
     "skills_validated": [
       "Experimental Design",
@@ -7908,7 +7908,7 @@ export const certifications: Certification[] = [
     "name": "Certification 17",
     "industry_title": "International Baccalaureate (IB) Diploma Specialist",
     "category": "Chinese",
-    "issuing_body": "Apex Institute Singapore in partnership with Singapore Industry Boards",
+    "issuing_body": "Dagsis University Dummy in partnership with Singapore Industry Boards",
     "verification_code": "SG-APX-1752",
     "skills_validated": [
       "Higher Chinese Composition",
@@ -7924,7 +7924,7 @@ export const certifications: Certification[] = [
     "name": "Certification 18",
     "industry_title": "Cambridge IGCSE Global Honors Diploma",
     "category": "IB Programme",
-    "issuing_body": "Apex Institute Singapore in partnership with Singapore Industry Boards",
+    "issuing_body": "Dagsis University Dummy in partnership with Singapore Industry Boards",
     "verification_code": "SG-APX-1799",
     "skills_validated": [
       "Internal Assessments (IA)",
@@ -7940,7 +7940,7 @@ export const certifications: Certification[] = [
     "name": "Certification 19",
     "industry_title": "Microsoft Certified Power BI Data Analyst Associate",
     "category": "IGCSE Programme",
-    "issuing_body": "Apex Institute Singapore in partnership with Singapore Industry Boards",
+    "issuing_body": "Dagsis University Dummy in partnership with Singapore Industry Boards",
     "verification_code": "SG-APX-1846",
     "skills_validated": [
       "Past Paper Mastery",
@@ -7956,7 +7956,7 @@ export const certifications: Certification[] = [
     "name": "Certification 20",
     "industry_title": "ISTQB Certified Quality & Test Automation Engineer",
     "category": "Power BI",
-    "issuing_body": "Apex Institute Singapore in partnership with Singapore Industry Boards",
+    "issuing_body": "Dagsis University Dummy in partnership with Singapore Industry Boards",
     "verification_code": "SG-APX-1893",
     "skills_validated": [
       "DAX Formulas",

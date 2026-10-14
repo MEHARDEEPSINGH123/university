@@ -113,7 +113,7 @@ export default function Modals() {
                         required
                         value={trialPhone}
                         onChange={(e) => setTrialPhone(e.target.value)}
-                        placeholder="+65 9123 4567"
+                        placeholder="+65 XXXXXXXXX"
                         className="w-full px-3.5 py-2.5 bg-white border border-slate-200 rounded-xl focus:outline-none focus:border-[#047857] text-[#111827] transition"
                       />
                     </div>
@@ -222,7 +222,7 @@ export default function Modals() {
 
             <div className="p-4 bg-[#F8FAFC] border border-slate-200 rounded-xl text-xs text-[#111827] space-y-2 mb-4 leading-relaxed">
               <p>
-                "Welcome to Apex Institute of Singapore. Please state your target curriculum, intake term, or question regarding SkillsFuture Credit funding."
+                "Welcome to Dagsis University Dummy. Please state your target curriculum, intake term, or question regarding SkillsFuture Credit funding."
               </p>
             </div>
 
@@ -234,12 +234,12 @@ export default function Modals() {
               />
               <button
                 onClick={() => {
-                  showToast('Redirecting to Admissions WhatsApp Registry (+65 8299 1234)...', 'success');
+                  showToast('Redirecting to Admissions WhatsApp Registry (+65 XXXXXXXXX)...', 'success');
                   closeWhatsAppModal();
                 }}
                 className="btn-primary w-full text-xs py-3 font-semibold rounded-xl shadow-sm"
               >
-                Connect to Admissions Desk (+65 8299 1234)
+                Connect to Admissions Desk (+65 XXXXXXXXX)
               </button>
             </div>
           </div>

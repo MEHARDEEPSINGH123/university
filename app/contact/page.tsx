@@ -101,7 +101,7 @@ function ContactContent() {
                       required
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
-                      placeholder="+65 9123 4567"
+                      placeholder="+65 XXXXXXXXX"
                       className="w-full px-3.5 py-2.5 bg-white border border-slate-200 rounded-xl focus:outline-none focus:border-[#047857] text-[#111827] transition"
                     />
                   </div>
@@ -160,9 +160,8 @@ function ContactContent() {
                 <div className="flex items-start gap-3">
                   <MapPin className="w-4 h-4 text-[#047857] flex-shrink-0 mt-0.5" />
                   <div>
-                    <div className="font-semibold text-[#111827]">Somerset Flagship Executive Centre</div>
-                    <div>111 Somerset Road, #10-01 TripleOne Somerset, Singapore 238164</div>
-                    <div className="text-[11px] text-[#6B7280] mt-0.5">Direct sheltered link to Somerset MRT (NS23, Exit A)</div>
+                    <div className="font-semibold text-[#111827]">Dagsis University Main Campus</div>
+                    <div>123, Street ABC, State XYZ, Pin-000000</div>
                   </div>
                 </div>
 
@@ -170,7 +169,7 @@ function ContactContent() {
                   <Phone className="w-4 h-4 text-[#047857] flex-shrink-0 mt-0.5" />
                   <div>
                     <div className="font-semibold text-[#111827]">Admissions Central Hotline</div>
-                    <div>+65 6732 8888 (Mondays to Fridays, 09:00 – 18:00 SGT)</div>
+                    <div>+65 XXXXXXXXX (Mondays to Fridays, 09:00 – 18:00 SGT)</div>
                   </div>
                 </div>
 
@@ -178,8 +177,8 @@ function ContactContent() {
                   <Mail className="w-4 h-4 text-[#047857] flex-shrink-0 mt-0.5" />
                   <div>
                     <div className="font-semibold text-[#111827]">Electronic Correspondence</div>
-                    <div>admissions@apex.edu.sg (General Admissions)</div>
-                    <div>executive@apex.edu.sg (Corporate Enterprise)</div>
+                    <div>admissions@dagsis.edu.sg (General Admissions)</div>
+                    <div>executive@dagsis.edu.sg (Corporate Enterprise)</div>
                   </div>
                 </div>
               </div>

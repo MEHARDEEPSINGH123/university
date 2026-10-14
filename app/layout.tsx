@@ -23,12 +23,12 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Apex Institute of Singapore | Executive Education & Professional Learning",
+  title: "Dagsis University Dummy | Executive Education & Professional Learning",
   description:
     "Registered with the Committee for Private Education (CPE UEN: 201829481E). Providing accredited executive education diplomas, professional certifications, and academic preparatory programmes in Singapore. SkillsFuture Singapore and NTUC UTAP eligible.",
   keywords: [
     "Singapore Executive Education",
-    "Apex Institute of Singapore",
+    "Dagsis University Dummy",
     "SkillsFuture Approved Courses",
     "Professional Certifications Singapore",
     "Data Analytics Executive Diploma",

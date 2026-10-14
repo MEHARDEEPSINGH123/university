@@ -102,7 +102,7 @@ export default function HomePage() {
     },
     {
       q: 'How are student course fees protected under the Fee Protection Scheme (FPS)?',
-      a: 'In accordance with the mandatory requirements of the Committee for Private Education (CPE) under the Private Education Act (Cap 247A), Apex Institute protects 100% of student course fees via an Industry-wide Insurance Scheme administered by Lonpac Insurance Bhd. An insurance certificate is issued to every enrolled student upon fee receipt.',
+      a: 'In accordance with the mandatory requirements of the Committee for Private Education (CPE) under the Private Education Act (Cap 247A), Dagsis University Dummy protects 100% of student course fees via an Industry-wide Insurance Scheme administered by Lonpac Insurance Bhd. An insurance certificate is issued to every enrolled student upon fee receipt.',
     },
     {
       q: 'What is the required attendance and assessment standard to graduate?',
@@ -133,7 +133,7 @@ export default function HomePage() {
               
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#ECFDF5] border border-[#A7F3D0] text-[#047857] text-xs font-semibold tracking-wide">
                 <span className="w-2 h-2 rounded-full bg-[#047857]" />
-                <span>Apex Institute of Singapore • CPE Reg: 201829481E</span>
+                <span>Dagsis University Dummy • CPE Reg: 201829481E</span>
               </div>
 
               <h1 className="font-heading font-serif text-3xl sm:text-5xl lg:text-6xl leading-[1.12] text-[#111827] font-bold tracking-tight">
@@ -141,7 +141,7 @@ export default function HomePage() {
               </h1>
 
               <p className="text-base sm:text-lg text-[#6B7280] leading-relaxed max-w-2xl font-normal">
-                Established under the Private Education Act, Apex Institute delivers accredited executive diplomas, professional micro-credentials, and foundational academic preparatory tuition aligned with Singapore's national Skills Framework and Cambridge international standards.
+                Established under the Private Education Act, Dagsis University Dummy delivers accredited executive diplomas, professional micro-credentials, and foundational academic preparatory tuition aligned with Singapore's national Skills Framework and Cambridge international standards.
               </p>
 
               {/* Clean Academic Search Bar */}
@@ -597,7 +597,7 @@ export default function HomePage() {
               Institutional Excellence
             </span>
             <h2 className="font-heading font-serif text-3xl sm:text-4xl font-bold text-[#111827] mt-1.5">
-              Why Choose Apex Institute of Singapore
+              Why Choose Dagsis University Dummy
             </h2>
             <div className="editorial-rule mt-3 mb-4" />
             <p className="text-sm text-[#6B7280] leading-relaxed">
@@ -698,7 +698,7 @@ export default function HomePage() {
               Distinguished Faculty & Executive Fellows
             </h2>
             <p className="text-sm text-[#6B7280] mt-2 leading-relaxed">
-              Apex Institute’s faculty members hold advanced doctoral degrees and terminal professional qualifications from leading global research universities, combining deep pedagogical expertise with executive industry practice.
+              Dagsis University Dummy’s faculty members hold advanced doctoral degrees and terminal professional qualifications from leading global research universities, combining deep pedagogical expertise with executive industry practice.
             </p>
           </div>
 
@@ -769,7 +769,7 @@ export default function HomePage() {
               Pedagogical Delivery
             </span>
             <h2 className="font-heading font-serif text-3xl sm:text-4xl font-bold text-[#111827] mt-1.5">
-              The Apex Learning Experience
+              The Dagsis Learning Experience
             </h2>
             <p className="text-sm text-[#6B7280] mt-2">
               Flexible, high-impact study modes tailored for working professionals, corporate teams, and academic scholars across Singapore.
@@ -854,7 +854,7 @@ export default function HomePage() {
               Accreditations & Qualifications Conferred
             </h2>
             <p className="text-sm text-[#6B7280] mt-2 leading-relaxed">
-              Qualifications conferred by Apex Institute of Singapore carry verified institutional credentials, cryptographic verification IDs, and alignment with Singapore's national competency benchmarks.
+              Qualifications conferred by Dagsis University Dummy carry verified institutional credentials, cryptographic verification IDs, and alignment with Singapore's national competency benchmarks.
             </p>
           </div>
 
@@ -1249,10 +1249,7 @@ export default function HomePage() {
                   <div>
                     <div className="font-bold text-[#111827]">Principal Campus & Registry</div>
                     <div className="text-[#6B7280] mt-0.5">
-                      111 Somerset Road, #10-01 TripleOne Somerset, Singapore 238164
-                    </div>
-                    <div className="text-[11px] text-[#6B7280] mt-0.5">
-                      Adjacent to Somerset MRT (North-South Line, Exit A)
+                      123, Street ABC, State XYZ, Pin-000000
                     </div>
                   </div>
                 </div>
@@ -1261,7 +1258,7 @@ export default function HomePage() {
                   <Phone className="w-4 h-4 text-[#047857] mt-0.5 flex-shrink-0" />
                   <div>
                     <div className="font-bold text-[#111827]">Admissions Telephone Hotline</div>
-                    <div className="text-[#6B7280] mt-0.5">+65 6732 8888 / +65 8299 1234</div>
+                    <div className="text-[#6B7280] mt-0.5">+65 XXXXXXXXX</div>
                     <div className="text-[11px] text-[#6B7280] mt-0.5">
                       Mondays to Fridays: 09:00 – 18:00 SGT
                     </div>
@@ -1272,9 +1269,9 @@ export default function HomePage() {
                   <Mail className="w-4 h-4 text-[#047857] mt-0.5 flex-shrink-0" />
                   <div>
                     <div className="font-bold text-[#111827]">Official Electronic Correspondence</div>
-                    <div className="text-[#6B7280] mt-0.5">admissions@apex.edu.sg</div>
+                    <div className="text-[#6B7280] mt-0.5">admissions@dagsis.edu.sg</div>
                     <div className="text-[11px] text-[#6B7280] mt-0.5">
-                      Corporate Sponsorship: executive@apex.edu.sg
+                      Corporate Sponsorship: executive@dagsis.edu.sg
                     </div>
                   </div>
                 </div>
@@ -1369,7 +1366,7 @@ export default function HomePage() {
                           required
                           value={formData.phone}
                           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                          placeholder="+65 9123 4567"
+                          placeholder="+65 XXXXXXXXX"
                           className="w-full px-3.5 py-2.5 text-xs bg-white border border-[#E5E7EB] rounded-xl text-[#111827] focus:outline-none focus:border-[#047857]"
                         />
                       </div>

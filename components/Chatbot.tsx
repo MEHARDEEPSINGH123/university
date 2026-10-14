@@ -15,25 +15,25 @@ export default function Chatbot() {
   // Official Dagsis AI Agent credentials
   const agentId = "5532eb99-e9a2-4359-b2c0-3cd13df497c0";
   const apiKey = "4bb7afdb-cb9b-4148-b4f8-92c546476eac";
-  const agentName = "APEX AI";
+  const agentName = "DAGSIS AI";
   
   // Real live Dagsis AI production embed endpoint
   const embedUrl = `https://dagsis.ai/embed/${agentId}?name=${encodeURIComponent(agentName)}#apiKey=${encodeURIComponent(apiKey)}`;
 
   return (
     <>
-      {/* 1. Floating 'Ask APEX AI' Button */}
+      {/* 1. Floating 'Ask DAGSIS AI' Button */}
       {!isChatbotOpen && (
         <button
           onClick={openChatbot}
           className="fixed bottom-6 right-6 z-50 bg-[#047857] hover:bg-[#065F46] text-white rounded-full p-3.5 sm:px-5 sm:py-3.5 shadow-2xl border-2 border-emerald-400 flex items-center space-x-2.5 transition-all duration-300 hover:scale-105 group"
-          title="Open APEX AI Admissions Advisor"
+          title="Open DAGSIS AI Admissions Advisor"
         >
           <div className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center text-white group-hover:scale-110 transition-transform">
             <Sparkles className="w-4 h-4 text-amber-300" />
           </div>
           <span className="hidden sm:inline font-body text-sm font-semibold tracking-wide text-white">
-            Ask APEX AI
+            Ask DAGSIS AI
           </span>
         </button>
       )}
@@ -50,7 +50,7 @@ export default function Chatbot() {
               <div>
                 <div className="flex items-center space-x-2">
                   <h3 className="font-heading font-serif text-sm font-bold text-white tracking-wide">
-                    APEX AI
+                    DAGSIS AI
                   </h3>
                   <span className="flex items-center space-x-1 text-[9px] bg-white/20 text-white border border-white/30 px-2 py-0.5 rounded-full font-medium uppercase tracking-wider">
                     <span className="w-1.5 h-1.5 rounded-full bg-emerald-300 animate-pulse"></span>
@@ -94,7 +94,7 @@ export default function Chatbot() {
               onLoad={() => setIframeLoaded(true)}
               className="w-full h-full border-none"
               allow="clipboard-write; microphone"
-              title="APEX Dagsis AI Agent"
+              title="Dagsis University AI Agent"
             />
           </div>
         </div>

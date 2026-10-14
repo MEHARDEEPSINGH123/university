@@ -39,7 +39,7 @@ export default function ApexLogo({
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         className="flex-shrink-0 transition-transform duration-200 group-hover:scale-105"
-        aria-label="Apex Institute Academic Crest"
+        aria-label="Dagsis University Academic Crest"
       >
         {/* Outer Heraldic Shield */}
         <path
@@ -118,7 +118,7 @@ export default function ApexLogo({
         </text>
       </svg>
 
-      {/* Typography Wordmark */}
+        {/* Typography Wordmark */}
       {showWordmark && (
         <div className="flex flex-col text-left">
           <div
@@ -126,7 +126,7 @@ export default function ApexLogo({
               isLight ? 'text-white' : 'text-[#111827]'
             }`}
           >
-            APEX INSTITUTE
+            DAGSIS UNIVERSITY DUMMY
           </div>
           <div className="flex items-center gap-1.5 mt-0.5">
             <span

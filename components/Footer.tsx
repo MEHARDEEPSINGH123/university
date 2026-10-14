@@ -22,6 +22,17 @@ export default function Footer() {
               Registered under the Private Education Act (Cap 247A). Committee for Private Education (CPE Registration No: 201829481E, Period of Registration: 15 July 2022 to 14 July 2026). EduTrust 4-Year Certified. All student course fees are protected under the mandatory Lonpac Insurance Fee Protection Scheme (FPS).
             </p>
 
+            <div className="text-xs text-slate-300 space-y-1.5 pt-2 border-t border-slate-800/80">
+              <div className="flex items-center gap-2">
+                <span className="text-slate-400 font-medium">Address:</span>
+                <span className="text-white">123, Street ABC, State XYZ, Pin-000000</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-slate-400 font-medium">Mobile:</span>
+                <span className="text-emerald-400 font-mono font-medium">+65 XXXXXXXXX</span>
+              </div>
+            </div>
+
             <div className="pt-2 text-[11px] text-emerald-400 font-semibold space-y-1">
               <div>✓ SkillsFuture Singapore (SSG) Non-WSQ Approved Training Provider</div>
               <div>✓ NTUC Union Training Assistance Programme (UTAP) Supported</div>
@@ -78,7 +89,7 @@ export default function Footer() {
         {/* Bottom Legal & Regulatory Strip */}
         <div className="pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-500 text-[11px]">
           <div>
-            © 2026 Apex Institute of Singapore Pte. Ltd. All rights reserved. Registered Private Education Institution.
+            © 2026 Dagsis University Dummy Pte. Ltd. All rights reserved. Registered Private Education Institution.
           </div>
           <div className="flex items-center gap-4">
             <span className="hover:text-slate-400 cursor-pointer">PEI Standard Student Contract</span>

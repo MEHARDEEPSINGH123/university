@@ -49,7 +49,7 @@ export default function CertificationsPage() {
             Institutional Certifications & Credential Registry
           </h1>
           <p className="text-sm text-[#6B7280] max-w-3xl mt-2 leading-relaxed">
-            Every diploma, executive certificate, and competency attestation conferred by Apex Institute of Singapore is registered with our central academic records archive and verifiable by employers and institutions.
+            Every diploma, executive certificate, and competency attestation conferred by Dagsis University Dummy is registered with our central academic records archive and verifiable by employers and institutions.
           </p>
         </div>
 

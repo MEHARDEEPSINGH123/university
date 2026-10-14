@@ -159,7 +159,7 @@ function AdmissionsContent() {
                             required
                             value={phone}
                             onChange={(e) => setPhone(e.target.value)}
-                            placeholder="+65 9123 4567"
+                            placeholder="+65 XXXXXXXXX"
                             className="w-full px-3.5 py-2.5 text-xs bg-white border border-slate-200 rounded-xl focus:outline-none focus:border-[#047857] focus:ring-1 focus:ring-[#047857] transition text-[#111827]"
                           />
                         </div>
@@ -316,7 +316,7 @@ function AdmissionsContent() {
                 CPE Statutory Disclosures
               </h4>
               <p className="text-xs text-[#6B7280] leading-relaxed">
-                As a Private Education Institution registered under the Private Education Act (Cap 247A), Apex Institute adheres to all statutory requirements administered by SkillsFuture Singapore (SSG).
+                As a Private Education Institution registered under the Private Education Act (Cap 247A), Dagsis University Dummy adheres to all statutory requirements administered by SkillsFuture Singapore (SSG).
               </p>
               <div className="pt-3 text-xs space-y-2.5 text-[#111827] border-t border-slate-100">
                 <div className="flex items-center gap-2">
@@ -338,8 +338,8 @@ function AdmissionsContent() {
                 For questions regarding academic exemptions, credit transfers, or corporate cohort sponsorship:
               </p>
               <div className="pt-2 font-medium text-[#111827] leading-relaxed">
-                Telephone: +65 6732 8888<br />
-                Email: admissions@apex.edu.sg
+                Telephone: +65 XXXXXXXXX<br />
+                Email: admissions@dagsis.edu.sg
               </div>
             </div>
 
