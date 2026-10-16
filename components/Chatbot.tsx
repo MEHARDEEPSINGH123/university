@@ -21,8 +21,8 @@ export default function Chatbot() {
   }, []);
 
   // Official Dagsis AI Agent credentials
-  const agentId = "6145a5ca-4d1a-489a-af23-9ab3cf7df1b1";
-  const apiKey = "21f9e3d6-98f1-4cea-819e-54efc323e887";
+  const agentId = "f152768a-c17e-4c27-9e88-cb7c79397e17";
+  const apiKey = "b0cc0263-c2f1-4d13-a58c-cb9299752a20";
   const agentName = "DAGSIS AI";
   
   // Real live Dagsis AI production embed endpoint
