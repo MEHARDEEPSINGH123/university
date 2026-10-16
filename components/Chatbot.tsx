@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useApp } from '@/context/AppContext';
 import { 
   Sparkles, 
@@ -11,6 +11,14 @@ import {
 export default function Chatbot() {
   const { isChatbotOpen, openChatbot, closeChatbot } = useApp();
   const [iframeLoaded, setIframeLoaded] = useState(false);
+
+  // Clean up any lingering default unstyled widget elements from DOM
+  useEffect(() => {
+    const oldBtn = document.getElementById('dagsis-chat-button');
+    if (oldBtn) oldBtn.remove();
+    const oldContainer = document.getElementById('dagsis-chat-container');
+    if (oldContainer) oldContainer.remove();
+  }, []);
 
   // Official Dagsis AI Agent credentials
   const agentId = "6145a5ca-4d1a-489a-af23-9ab3cf7df1b1";
@@ -26,7 +34,7 @@ export default function Chatbot() {
       {!isChatbotOpen && (
         <button
           onClick={openChatbot}
-          className="fixed bottom-6 right-6 z-50 bg-[#047857] hover:bg-[#065F46] text-white rounded-full p-3.5 sm:px-5 sm:py-3.5 shadow-2xl border-2 border-emerald-400 flex items-center space-x-2.5 transition-all duration-300 hover:scale-105 group"
+          className="fixed bottom-6 right-6 z-[999999] bg-[#047857] hover:bg-[#065F46] text-white rounded-full p-3.5 sm:px-5 sm:py-3.5 shadow-2xl border-2 border-emerald-400 flex items-center space-x-2.5 transition-all duration-300 hover:scale-105 group"
           title="Open DAGSIS AI Admissions Advisor"
         >
           <div className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center text-white group-hover:scale-110 transition-transform">
@@ -40,7 +48,7 @@ export default function Chatbot() {
 
       {/* 2. Real Live Dagsis AI Chat Window matching University Theme */}
       {isChatbotOpen && (
-        <div className="fixed bottom-4 sm:bottom-6 right-4 sm:right-6 z-50 w-[380px] sm:w-[420px] max-w-[calc(100vw-32px)] h-[620px] max-h-[calc(100vh-80px)] bg-white rounded-2xl shadow-2xl border border-slate-200 flex flex-col overflow-hidden animate-in fade-in slide-in-from-bottom-5">
+        <div className="fixed bottom-4 sm:bottom-6 right-4 sm:right-6 z-[999999] w-[380px] sm:w-[420px] max-w-[calc(100vw-32px)] h-[620px] max-h-[calc(100vh-80px)] bg-white rounded-2xl shadow-2xl border border-slate-200 flex flex-col overflow-hidden animate-in fade-in slide-in-from-bottom-5">
           {/* Themed Header */}
           <div className="bg-[#047857] text-white p-3.5 px-4 flex items-center justify-between border-b border-emerald-800">
             <div className="flex items-center space-x-3">
