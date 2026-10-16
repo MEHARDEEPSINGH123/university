@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Apex Institute of Singapore — AI Chatbot Knowledge Base & Retrieval Corpus PDF Generator
+Dagsis University Dummy — AI Chatbot Knowledge Base & Retrieval Corpus PDF Generator
 Produces a high-density, beautifully styled, multi-page PDF reference document
 specifically formatted for AI ingestion (RAG, vector databases, custom GPTs)
 and human educational counselors.
@@ -53,11 +53,11 @@ class NumberedCanvas(canvas.Canvas):
             # Header text
             self.setFont("Helvetica-Bold", 7)
             self.setFillColor(colors.HexColor("#047857"))
-            self.drawString(36, A4[1] - 25, "APEX INSTITUTE OF SINGAPORE")
+            self.drawString(36, A4[1] - 25, "DAGSIS UNIVERSITY DUMMY")
             
             self.setFont("Helvetica", 7)
             self.setFillColor(colors.HexColor("#64748B"))
-            self.drawString(170, A4[1] - 25, "•  AI Chatbot Knowledge Base & Retrieval Corpus")
+            self.drawString(175, A4[1] - 25, "•  AI Chatbot Knowledge Base & Retrieval Corpus")
             self.drawRightString(A4[0] - 36, A4[1] - 25, "CPE REG: 201829481E  |  EduTrust 4-Year")
             
             # Header line
@@ -218,26 +218,17 @@ def generate_pdf(output_path, data):
         spaceAfter=2.5,
     )
 
-    callout_style = ParagraphStyle(
-        'Callout_Custom',
-        parent=styles['Normal'],
-        fontName='Helvetica',
-        fontSize=7.5,
-        leading=10.5,
-        textColor=c_dark,
-    )
-
     table_header_style = ParagraphStyle(
-        'TableHeader',
+        'TH_Custom',
         parent=styles['Normal'],
         fontName='Helvetica-Bold',
-        fontSize=7,
-        leading=9,
+        fontSize=7.2,
+        leading=9.5,
         textColor=colors.white,
     )
 
     table_cell_style = ParagraphStyle(
-        'TableCell',
+        'TC_Custom',
         parent=styles['Normal'],
         fontName='Helvetica',
         fontSize=6.8,
@@ -246,7 +237,7 @@ def generate_pdf(output_path, data):
     )
 
     table_cell_bold = ParagraphStyle(
-        'TableCellBold',
+        'TCB_Custom',
         parent=styles['Normal'],
         fontName='Helvetica-Bold',
         fontSize=6.8,
@@ -255,7 +246,7 @@ def generate_pdf(output_path, data):
     )
 
     table_cell_green = ParagraphStyle(
-        'TableCellGreen',
+        'TCG_Custom',
         parent=styles['Normal'],
         fontName='Helvetica-Bold',
         fontSize=6.8,
@@ -263,19 +254,28 @@ def generate_pdf(output_path, data):
         textColor=c_primary,
     )
 
+    callout_style = ParagraphStyle(
+        'CalloutText',
+        parent=styles['Normal'],
+        fontName='Helvetica',
+        fontSize=7.5,
+        leading=10.5,
+        textColor=colors.HexColor("#78350F"),
+    )
+
     code_style = ParagraphStyle(
-        'CodeStyle',
+        'CodeBlock',
         parent=styles['Normal'],
         fontName='Courier',
-        fontSize=7,
-        leading=9.5,
-        textColor=colors.HexColor("#0F172A"),
+        fontSize=6.5,
+        leading=8.5,
+        textColor=c_dark,
     )
 
     story = []
 
     # =========================================================================
-    # COVER PAGE
+    # COVER / EXECUTIVE TITLE PAGE
     # =========================================================================
     story.append(Spacer(1, 10))
 
@@ -296,18 +296,18 @@ def generate_pdf(output_path, data):
     story.append(t_badge)
     story.append(Spacer(1, 14))
 
-    story.append(Paragraph("APEX INSTITUTE OF SINGAPORE", title_style))
+    story.append(Paragraph("DAGSIS UNIVERSITY DUMMY", title_style))
     story.append(Paragraph("Executive Education & Academic Preparatory Tuition Platform<br/><font color='#64748B'>Official Comprehensive Knowledge Base, Context Retrieval Corpus & AI Chatbot Playbook</font>", subtitle_style))
     story.append(HRFlowable(width="100%", thickness=1.5, color=c_primary, spaceBefore=0, spaceAfter=14))
 
     # Document Metadata Table
     doc_specs = [
         [Paragraph("Document Title:", table_cell_bold), Paragraph("AI Chatbot Comprehensive Grounding & RAG Retrieval Corpus", table_cell_style),
-         Paragraph("Document Ref:", table_cell_bold), Paragraph("APX-KB-2026-FINAL", table_cell_style)],
+         Paragraph("Document Ref:", table_cell_bold), Paragraph("DGS-KB-2026-FINAL", table_cell_style)],
         [Paragraph("Statutory Status:", table_cell_bold), Paragraph("CPE Registered PEI (UEN: 201829481E) • EduTrust 4-Year", table_cell_style),
          Paragraph("Last Updated:", table_cell_bold), Paragraph("October 2026 / Academic Year 2026-2027", table_cell_style)],
         [Paragraph("Target AI Roles:", table_cell_bold), Paragraph("Admissions Advisor, Subsidy Calculator, Campus Navigator, Academic Registrar", table_cell_style),
-         Paragraph("Fee Protection:", table_cell_bold), Paragraph("Lonpac Insurance Bhd Fee Protection Scheme (FPS)", table_cell_style)],
+         Paragraph("Fee Protection:", table_cell_bold), Paragraph("Approved Fee Protection Scheme (FPS) Underwriter", table_cell_style)],
         [Paragraph("Corpus Breadth:", table_cell_bold), Paragraph("100 Approved Curricula • 30 Faculty • 10 Singapore Campuses • 20 Certifications", table_cell_style),
          Paragraph("Statutory Framework:", table_cell_bold), Paragraph("Private Education Act (Cap 247A) & SkillsFuture SG", table_cell_style)],
     ]
@@ -328,9 +328,9 @@ def generate_pdf(output_path, data):
     callout_data = [[
         Paragraph(
             "<b>OPERATIONAL SPECIFICATION & AI INGESTION DIRECTIVE:</b><br/>"
-            "This document constitutes the official knowledge repository for Apex Institute of Singapore. "
+            "This document constitutes the official knowledge repository for Dagsis University Dummy. "
             "It is formatted specifically for RAG (Retrieval-Augmented Generation), vector databases, and LLM embedding workflows. "
-            "All fee structures, SkillsFuture subsidies, Lonpac Fee Protection Scheme rules, CPE Schedule D refund matrices, "
+            "All fee structures, SkillsFuture subsidies, Fee Protection Scheme (FPS) statutory rules, CPE Schedule D refund matrices, "
             "and campus coordinates herein are binding and legally compliant under Singapore statutory law.",
             callout_style
         )
@@ -378,7 +378,7 @@ def generate_pdf(output_path, data):
     
     story.append(Paragraph("<b>1.1 Legal Identity & Statutory Authority</b>", h2_style))
     story.append(Paragraph(
-        "Apex Institute of Singapore Pte. Ltd. is a registered Private Education Institution (PEI) governed by the Committee for Private Education (CPE), a statutory agency under SkillsFuture Singapore (SSG) created by the Private Education Act (Cap 247A). The Institute holds an uninterrupted 4-Year EduTrust Certification and adheres strictly to the Enhanced Registration Framework (ERF).",
+        "Dagsis University Dummy is a registered Private Education Institution (PEI) governed by the Committee for Private Education (CPE), a statutory agency under SkillsFuture Singapore (SSG) created by the Private Education Act (Cap 247A). The University holds an uninterrupted 4-Year EduTrust Certification and adheres strictly to the Enhanced Registration Framework (ERF).",
         body_style
     ))
     
@@ -387,10 +387,12 @@ def generate_pdf(output_path, data):
          Paragraph("Registration Period:", table_cell_bold), Paragraph("15 July 2022 to 14 July 2026 (4-Year Grant)", table_cell_style)],
         [Paragraph("EduTrust Status:", table_cell_bold), Paragraph("EduTrust 4-Year Certified (Quality Distinction)", table_cell_style),
          Paragraph("Academic Governance:", table_cell_bold), Paragraph("Governed by the Academic Board & Examination Board", table_cell_style)],
-        [Paragraph("Fee Protection:", table_cell_bold), Paragraph("Lonpac Insurance Bhd (FPS Policy #LPC-PEI-201829481E)", table_cell_style),
-         Paragraph("Student Medical Insurance:", table_cell_bold), Paragraph("Income Insurance Ltd (Min S$20,000 annual limit)", table_cell_style)],
-        [Paragraph("Admissions Hotline:", table_cell_bold), Paragraph("+65 6732 8888 (Mondays–Fridays, 09:00–18:00 SGT)", table_cell_style),
-         Paragraph("Official WhatsApp:", table_cell_bold), Paragraph("+65 8299 1234 (Automated & Human Registrar)", table_cell_style)],
+        [Paragraph("Fee Protection:", table_cell_bold), Paragraph("Approved FPS Insurance Underwriter (FPS Policy #FPS-PEI-201829481E)", table_cell_style),
+         Paragraph("Student Medical Insurance:", table_cell_bold), Paragraph("Approved Medical Insurance Underwriter (Min S$20,000 annual limit)", table_cell_style)],
+        [Paragraph("Admissions Hotline:", table_cell_bold), Paragraph("+65 XXXXXXXXX (Mondays–Fridays, 09:00–18:00 SGT)", table_cell_style),
+         Paragraph("Official WhatsApp:", table_cell_bold), Paragraph("+65 XXXXXXXXX (Automated & Human Registrar)", table_cell_style)],
+        [Paragraph("Principal Address:", table_cell_bold), Paragraph("123, Street ABC, State XYZ, Pin-000000", table_cell_style),
+         Paragraph("Official Email:", table_cell_bold), Paragraph("admissions@dagsis.edu.sg", table_cell_style)],
     ]
     t_inst = Table(inst_table, colWidths=[95, 175, 100, printable_width - 370])
     t_inst.setStyle(TableStyle([
@@ -408,10 +410,10 @@ def generate_pdf(output_path, data):
     story.append(Paragraph("<b>1.2 Mandatory Fee Protection Scheme (FPS) & Standard PEI-Student Contract</b>", h2_style))
     story.append(Paragraph(
         "<b>Rule for Chatbot:</b> When users ask about fee security, assure them that 100% of their tuition fees are insured under Singapore law.<br/>"
-        "• <b>FPS Insurance Mechanism:</b> Apex Institute purchases insurance from Lonpac Insurance Bhd for every enrolled candidate. If the PEI is unable to continue operations due to insolvency or regulatory closure, Lonpac reimburses the unconsumed portion of course fees within 14 business days.<br/>"
+        "• <b>FPS Insurance Mechanism:</b> Dagsis University Dummy purchases statutory insurance from an appointed CPE-registered insurance underwriter for every enrolled candidate. If the PEI is unable to continue operations due to insolvency or regulatory closure, the insurer reimburses the unconsumed portion of course fees within 14 business days.<br/>"
         "• <b>Standard PEI-Student Contract:</b> No course fees may be collected until candidate executes the official CPE Standard PEI-Student Contract (Version 3.1). The contract specifies Schedule A (Course Details), Schedule B (Fee Breakdown), Schedule C (Miscellaneous Fees), and Schedule D (Refund Policy).<br/>"
         "• <b>Statutory Cooling-Off Period:</b> Students have a mandatory <b>7 working days cooling-off period</b> commencing immediately upon contract signing. Within these 7 days, a student may withdraw for any reason and receive a <b>100% refund</b> of course fees paid (less non-refundable registration application fee of S$100).<br/>"
-        "• <b>Fee Collection Cap:</b> Apex Institute is legally prohibited from collecting course fees exceeding 12 months' worth of tuition in advance.",
+        "• <b>Fee Collection Cap:</b> Dagsis University Dummy is legally prohibited from collecting course fees exceeding 12 months' worth of tuition in advance.",
         body_style
     ))
     story.append(Spacer(1, 6))
@@ -419,13 +421,33 @@ def generate_pdf(output_path, data):
     story.append(Paragraph("<b>1.3 CPE Standard Schedule D Refund Matrix</b>", h2_style))
     refund_table_data = [
         [Paragraph("Circumstance of Student Withdrawal", table_header_style), Paragraph("Refund Amount (%)", table_header_style), Paragraph("Chatbot Handling Guideline", table_header_style)],
-        [Paragraph("Notice received within 7 working days cooling-off period", table_cell_bold), Paragraph("<b>100%</b> of Course Fees Paid", table_cell_green), Paragraph("Instant statutory refund; process within 7 working days.", table_cell_style)],
-        [Paragraph("Notice received >= 30 calendar days before course commencement", table_cell_style), Paragraph("<b>80%</b> of Course Fees Paid", table_cell_style), Paragraph("Standard pre-commencement withdrawal; 20% retained as administrative processing.", table_cell_style)],
-        [Paragraph("Notice received > 0 and < 30 calendar days before course commencement", table_cell_style), Paragraph("<b>50%</b> of Course Fees Paid", table_cell_style), Paragraph("Late pre-commencement notice; seat allocation fee retained.", table_cell_style)],
-        [Paragraph("Notice received on or after course commencement date", table_cell_style), Paragraph("<b>0%</b> (No refund)", table_cell_style), Paragraph("Course underway; candidate may request deferment to next cohort instead.", table_cell_style)],
-        [Paragraph("Course cancellation / PEI failure to commence cohort", table_cell_bold), Paragraph("<b>100%</b> + Full Registration Fee", table_cell_green), Paragraph("Immediate full reimbursement within 7 working days; offer alternative campus cohort.", table_cell_style)],
+        [
+            Paragraph("<b>Notice received within 7 working days cooling-off period</b>", table_cell_style),
+            Paragraph("<b>100%</b> of Course Fees Paid", table_cell_green),
+            Paragraph("Instant statutory refund; process within 7 working days.", table_cell_style),
+        ],
+        [
+            Paragraph("Notice received &gt;= 30 calendar days before course commencement", table_cell_style),
+            Paragraph("<b>80%</b> of Course Fees Paid", table_cell_style),
+            Paragraph("Standard pre-commencement withdrawal; 20% retained as administrative processing.", table_cell_style),
+        ],
+        [
+            Paragraph("Notice received &gt; 0 and &lt; 30 calendar days before course commencement", table_cell_style),
+            Paragraph("<b>50%</b> of Course Fees Paid", table_cell_style),
+            Paragraph("Late pre-commencement notice; seat allocation fee retained.", table_cell_style),
+        ],
+        [
+            Paragraph("Notice received on or after course commencement date", table_cell_style),
+            Paragraph("<b>0%</b> (No refund)", table_cell_style),
+            Paragraph("Course underway; candidate may request deferment to next cohort instead.", table_cell_style),
+        ],
+        [
+            Paragraph("<b>Course cancellation / PEI failure to commence cohort</b>", table_cell_style),
+            Paragraph("<b>100% + Full Registration Fee</b>", table_cell_green),
+            Paragraph("Immediate full reimbursement within 7 working days; offer alternative campus cohort.", table_cell_style),
+        ],
     ]
-    t_refund = Table(refund_table_data, colWidths=[200, 110, printable_width - 310])
+    t_refund = Table(refund_table_data, colWidths=[175, 120, printable_width - 295])
     t_refund.setStyle(TableStyle([
         ('BACKGROUND', (0, 0), (-1, 0), c_dark),
         ('BOX', (0, 0), (-1, -1), 0.6, c_border),
@@ -473,7 +495,7 @@ def generate_pdf(output_path, data):
         campus_rows.append([
             Paragraph(f"<b>{camp['name']}</b><br/><font color='#047857'>ID: {camp['id']} ({camp['type']})</font>", table_cell_style),
             Paragraph(f"{camp['address']}", table_cell_style),
-            Paragraph(f"<b>{camp['mrt']} MRT</b>", table_cell_bold),
+            Paragraph(f"<b>{camp['mrt']}</b>", table_cell_bold),
             Paragraph(f"{camp['hours']}", table_cell_style),
             Paragraph(f"{camp['phone']}<br/><font color='#64748B'>{camp['email']}</font>", table_cell_style),
         ])
@@ -491,13 +513,14 @@ def generate_pdf(output_path, data):
     story.append(t_camp)
     story.append(Spacer(1, 10))
 
-    story.append(Paragraph("<b>2.1 Somerset Flagship Executive Centre (Headquarters & Registry)</b>", h2_style))
+    story.append(Paragraph("<b>2.1 Principal Campus & Registry (Headquarters)</b>", h2_style))
     story.append(Paragraph(
-        "• <b>Location:</b> TripleOne Somerset, 111 Somerset Road #10-01, Singapore 238164.<br/>"
-        "• <b>Transit:</b> Sheltered link directly connected to Somerset MRT Station (North-South Line NS23, Exit A).<br/>"
-        "• <b>Facilities:</b> Office of the Registrar, Academic Board boardroom, 4 tiered lecture theatres (80 pax), 6 executive seminar suites (25 pax), high-performance AI Computing Lab equipped with Nvidia GPU workstations.<br/>"
-        "• <b>Admissions Desk Hours:</b> Mondays to Fridays 09:00–21:00; Saturdays & Sundays 09:00–18:00.<br/>"
-        "• <b>Appointment Protocol:</b> Prospective candidates may walk in or schedule private 1-on-1 consultations via chatbot.",
+        "• <b>Location:</b> 123, Street ABC, State XYZ, Pin-000000.<br/>"
+        "• <b>Transit:</b> Sheltered direct access to major transit networks and high-frequency MRT interchange routes.<br/>"
+        "• <b>Facilities:</b> Office of the Registrar, Academic Board boardroom, 4 tiered lecture theatres (80 pax), 6 executive seminar suites (25 pax), high-performance AI Computing Lab equipped with high-performance GPU workstations.<br/>"
+        "• <b>Admissions Desk Hours:</b> Mondays to Fridays 09:00–18:00; Saturdays & Sundays 09:00–13:00.<br/>"
+        "• <b>Appointment Protocol:</b> Prospective candidates may walk in or schedule private 1-on-1 consultations via chatbot.<br/>"
+        "• <b>Contact:</b> Telephone: +65 XXXXXXXXX | WhatsApp: +65 XXXXXXXXX | Email: admissions@dagsis.edu.sg",
         body_style
     ))
 
@@ -574,8 +597,8 @@ def generate_pdf(output_path, data):
     story.append(Paragraph("CHAPTER 4: ACADEMIC FACULTY BODY & DEPARTMENT LEADERSHIP (ALL 30 FELLOWS)", h1_style))
     story.append(HRFlowable(width="100%", thickness=1, color=c_primary, spaceBefore=2, spaceAfter=8))
     story.append(Paragraph(
-        "<b>Rule for Chatbot:</b> Apex Institute maintains a strictly enforced 1:12 faculty-to-student seminar ratio. "
-        "Our teaching faculty includes former MOE curriculum specialists, Cambridge scholars, and senior enterprise practitioners holding doctoral appointments. "
+        "<b>Rule for Chatbot:</b> Dagsis University Dummy maintains a strictly enforced 1:12 faculty-to-student seminar ratio. "
+        "Our teaching faculty includes former MOE curriculum specialists, Cambridge scholars, and senior academic practitioners holding doctoral appointments. "
         "Below is the complete registry of all 30 faculty members.",
         body_style
     ))
@@ -621,9 +644,9 @@ def generate_pdf(output_path, data):
 
     story.append(Paragraph("<b>4.1 Academic Pedagogy & Quality Assurance Standards</b>", h2_style))
     story.append(Paragraph(
-        "• <b>Heuristic & Applied Problem Solving:</b> Theoretical coursework is paired with live enterprise environments and real datasets.<br/>"
+        "• <b>Heuristic & Applied Problem Solving:</b> Theoretical coursework is paired with live research environments and real-world datasets.<br/>"
         "• <b>Independent Audits:</b> Student evaluations are audited quarterly by the Examination Board. Faculty maintain an aggregate satisfaction index of <b>4.91 / 5.0</b> across 24,500+ graduated scholars.<br/>"
-        "• <b>Consultation Hours:</b> Each faculty fellow hosts weekly dedicated office hours (virtual and in-person at Somerset and Jurong) for academic guidance and research mentoring.",
+        "• <b>Consultation Hours:</b> Each faculty fellow hosts weekly dedicated office hours for academic guidance and research mentoring.",
         body_style
     ))
 
@@ -680,15 +703,16 @@ def generate_pdf(output_path, data):
             Paragraph("Not eligible", table_cell_style),
         ],
     ]
-    t_sub = Table(subsidy_matrix, colWidths=[110, 115, 80, 110, printable_width - 415])
+
+    t_sub = Table(subsidy_matrix, colWidths=[110, 130, 85, 95, printable_width - 420])
     t_sub.setStyle(TableStyle([
         ('BACKGROUND', (0, 0), (-1, 0), c_dark),
         ('BOX', (0, 0), (-1, -1), 0.6, c_border),
         ('INNERGRID', (0, 0), (-1, -1), 0.4, c_border),
-        ('TOPPADDING', (0, 0), (-1, -1), 3),
-        ('BOTTOMPADDING', (0, 0), (-1, -1), 3),
-        ('LEFTPADDING', (0, 0), (-1, -1), 4),
-        ('RIGHTPADDING', (0, 0), (-1, -1), 4),
+        ('TOPPADDING', (0, 0), (-1, -1), 3.5),
+        ('BOTTOMPADDING', (0, 0), (-1, -1), 3.5),
+        ('LEFTPADDING', (0, 0), (-1, -1), 5),
+        ('RIGHTPADDING', (0, 0), (-1, -1), 5),
     ]))
     story.append(t_sub)
     story.append(Spacer(1, 10))
@@ -700,20 +724,19 @@ def generate_pdf(output_path, data):
         "2. <b>SSG Subsidy Deduction:</b> If SC 40+, deduct 70% (<i>Fee × 0.70</i>). If SC 25–39, deduct 50% (<i>Fee × 0.50</i>). If PR, deduct 30% (<i>Fee × 0.30</i>).<br/>"
         "3. <b>SkillsFuture Credit Deduction:</b> Subtract available SkillsFuture Credit (typically S$500 balance) from remaining payable balance.<br/>"
         "4. <b>UTAP Co-Funding Deduction:</b> If applicant is an NTUC member, deduct 50% of the remaining out-of-pocket tuition, capped at S$250 per calendar year.<br/>"
-        "5. <b>Net Cash Outlay:</b> Remaining balance may be paid via PayNow, GIRO, SkillsFuture Credit top-up, or 0% interest credit card installments.<br/>"
-        "<b>Example:</b> For a S$2,000 course taken by an SC aged 42 with NTUC membership: "
-        "SSG pays S$1,400 (70%) → Remaining is S$600. SFC offset takes S$500 → Remaining is S$100. UTAP covers 50% (S$50) → <b>Net Cash Outlay = S$50 only!</b>",
+        "5. <b>Net Cash Outlay:</b> Remaining balance may be paid via PayNow, GIRO, SkillsFuture Credit top-up, or 0% interest credit card installments with major retail banks.<br/>"
+        "<i>Example:</i> For a S$2,000 course taken by an SC aged 42 with NTUC membership: SSG pays S$1,400 (70%) → Remaining is S$600. SFC offset takes S$500 → Remaining is S$100. UTAP covers 50% (S$50) → <b>Net Cash Outlay = S$50 only!</b>",
         body_style
     ))
-    story.append(Spacer(1, 6))
+    story.append(Spacer(1, 8))
 
     story.append(Paragraph("<b>5.3 How to Claim SkillsFuture Credit via MySkillsFuture Portal</b>", h2_style))
     story.append(Paragraph(
-        "1. <b>Enrollment:</b> Candidate submits formal application on Apex Institute website and receives formal Registry Student Contract.<br/>"
+        "1. <b>Enrollment:</b> Candidate submits formal application on Dagsis University Dummy website and receives formal Registry Student Contract.<br/>"
         "2. <b>Login:</b> Candidate visits <i>www.myskillsfuture.gov.sg</i> and logs in using Singpass.<br/>"
-        "3. <b>Select Course:</b> Search for 'Apex Institute of Singapore' and select the course code (e.g. CR006).<br/>"
+        "3. <b>Select Course:</b> Search for 'Dagsis University Dummy' and select the course code (e.g. CR006).<br/>"
         "4. <b>Upload Invoice:</b> Attach the official fee breakdown schedule provided by the Registrar.<br/>"
-        "5. <b>Disbursement:</b> SSG pays the approved credit directly to Apex Institute. Student only pays remaining net cash balance.<br/>"
+        "5. <b>Disbursement:</b> SSG pays the approved credit directly to Dagsis University Dummy. Student only pays remaining net cash balance.<br/>"
         "• <b>Deadline:</b> Claims must be submitted within <b>60 days before course start date</b> and no later than course commencement day.",
         body_style
     ))
@@ -725,38 +748,25 @@ def generate_pdf(output_path, data):
     # =========================================================================
     story.append(Paragraph("CHAPTER 6: ADMISSIONS, ENROLMENT & STUDENT LIFECYCLE PROTOCOLS", h1_style))
     story.append(HRFlowable(width="100%", thickness=1, color=c_primary, spaceBefore=2, spaceAfter=8))
-
-    story.append(Paragraph("<b>6.1 Four-Stage Formal Matriculation Journey</b>", h2_style))
     
-    adm_steps = [
-        [
-            Paragraph("<b>Stage 1: Application</b>", table_cell_bold),
-            Paragraph("Candidate submits full legal name (NRIC/Passport), contact coordinates, preferred campus, and target academic discipline via online portal.", table_cell_style)
-        ],
-        [
-            Paragraph("<b>Stage 2: Review</b>", table_cell_bold),
-            Paragraph("Academic Board verifies entry requirements (academic credentials, prior experience, language proficiency). Advisory issued within 24 hours.", table_cell_style)
-        ],
-        [
-            Paragraph("<b>Stage 3: Contracting</b>", table_cell_bold),
-            Paragraph("Execution of standard CPE Student Contract and Lonpac Fee Protection Scheme issuance. SkillsFuture and UTAP grant co-funding confirmed.", table_cell_style)
-        ],
-        [
-            Paragraph("<b>Stage 4: Matriculation</b>", table_cell_bold),
-            Paragraph("Student Portal credentials dispatched. Timetable, LMS syllabus, electronic learning materials, and seminar seat confirmed.", table_cell_style)
-        ],
+    story.append(Paragraph("<b>6.1 Four-Stage Formal Matriculation Journey</b>", h2_style))
+    lifecycle_data = [
+        [Paragraph("<b>Stage 1: Application</b>", table_cell_bold), Paragraph("Candidate submits full legal name (NRIC/Passport), contact coordinates, preferred campus, and target academic discipline via online portal.", table_cell_style)],
+        [Paragraph("<b>Stage 2: Review</b>", table_cell_bold), Paragraph("Academic Board verifies entry requirements (academic credentials, prior experience, language proficiency). Advisory issued within 24 hours.", table_cell_style)],
+        [Paragraph("<b>Stage 3: Contracting</b>", table_cell_bold), Paragraph("Execution of standard CPE Student Contract and Fee Protection Scheme (FPS) issuance. SkillsFuture and UTAP grant co-funding confirmed.", table_cell_style)],
+        [Paragraph("<b>Stage 4: Matriculation</b>", table_cell_bold), Paragraph("Student Portal credentials dispatched. Timetable, LMS syllabus, electronic learning materials, and seminar seat confirmed.", table_cell_style)],
     ]
-    t_adm = Table(adm_steps, colWidths=[120, printable_width - 120])
-    t_adm.setStyle(TableStyle([
+    t_lifecycle = Table(lifecycle_data, colWidths=[110, printable_width - 110])
+    t_lifecycle.setStyle(TableStyle([
         ('BACKGROUND', (0, 0), (-1, -1), c_surface),
         ('BOX', (0, 0), (-1, -1), 0.6, c_border),
         ('INNERGRID', (0, 0), (-1, -1), 0.4, c_border),
-        ('TOPPADDING', (0, 0), (-1, -1), 4),
-        ('BOTTOMPADDING', (0, 0), (-1, -1), 4),
+        ('TOPPADDING', (0, 0), (-1, -1), 5),
+        ('BOTTOMPADDING', (0, 0), (-1, -1), 5),
         ('LEFTPADDING', (0, 0), (-1, -1), 6),
         ('RIGHTPADDING', (0, 0), (-1, -1), 6),
     ]))
-    story.append(t_adm)
+    story.append(t_lifecycle)
     story.append(Spacer(1, 10))
 
     story.append(Paragraph("<b>6.2 Complimentary Trial Classes & Academic Diagnostic Assessments</b>", h2_style))
@@ -764,7 +774,7 @@ def generate_pdf(output_path, data):
         "• <b>Eligibility:</b> Prospective candidates and parents may book one complimentary diagnostic masterclass per curriculum.<br/>"
         "• <b>Capacity Cap:</b> Each seminar caps trial seats between 2 to 5 candidates to preserve faculty interaction.<br/>"
         "• <b>What's Included:</b> Curriculum overview, 45-minute live faculty lecture, diagnostic baseline score report, and private 1-on-1 counselor evaluation.<br/>"
-        "• <b>Booking via Chatbot:</b> Candidate provides Name, Mobile, Email, Target Course, and Preferred Campus. The chatbot generates an instant reservation code (e.g., <i>APX-ADM-2026-XXXX</i>).",
+        "• <b>Booking via Chatbot:</b> Candidate provides Name, Mobile (+65 XXXXXXXXX), Email, Target Course, and Preferred Campus. The chatbot generates an instant reservation code (e.g., DGS-ADM-2026-XXXX).",
         body_style
     ))
 
@@ -776,7 +786,7 @@ def generate_pdf(output_path, data):
     story.append(Paragraph("CHAPTER 7: CENTRAL CREDENTIAL REGISTRY, VERIFICATION & DIGITAL PARCHMENTS", h1_style))
     story.append(HRFlowable(width="100%", thickness=1, color=c_primary, spaceBefore=2, spaceAfter=8))
     story.append(Paragraph(
-        "<b>Rule for Chatbot:</b> Employers, background-check firms, and overseas universities can instantly authenticate any certificate issued by Apex Institute.<br/>"
+        "<b>Rule for Chatbot:</b> Employers, background-check firms, and overseas universities can instantly authenticate any certificate issued by Dagsis University Dummy.<br/>"
         "Below is the complete registry of all 20 institutional credentials and their official verification reference identifiers.",
         body_style
     ))
@@ -817,7 +827,7 @@ def generate_pdf(output_path, data):
 
     story.append(Paragraph("<b>7.1 Verification Protocol & Digital Parchment Security</b>", h2_style))
     story.append(Paragraph(
-        "• <b>Online Lookup:</b> Employers navigate to <i>apex.edu.sg/certifications</i> and enter the verification code.<br/>"
+        "• <b>Online Lookup:</b> Employers navigate to <i>dagsis.edu.sg/certifications</i> and enter the verification code.<br/>"
         "• <b>Data Returned:</b> Recipient Legal Name, Award Title, Conferred Specialization, Validation Body, and Academic Standing (Active/Distinction).<br/>"
         "• <b>Security Elements:</b> High-resolution digital transcripts feature an embedded cryptographic SHA-256 hash, CPE statutory seal, and instant QR verification link.",
         body_style
@@ -839,8 +849,8 @@ def generate_pdf(output_path, data):
     faq_items = [
         (
             "[INTENT: accreditation_inquiry]",
-            "Q1: Is Apex Institute of Singapore accredited and recognized by the Singapore government?",
-            "Yes. Apex Institute of Singapore is officially registered with the Committee for Private Education (CPE UEN: 201829481E) under the Private Education Act (Cap 247A). We hold an active 4-Year EduTrust Certification. Furthermore, our eligible professional programmes are approved by SkillsFuture Singapore (SSG) for government funding, Mid-Career Enhanced Subsidies (MCES), and NTUC UTAP union co-funding."
+            "Q1: Is Dagsis University Dummy accredited and recognized by the Singapore government?",
+            "Yes. Dagsis University Dummy is officially registered with the Committee for Private Education (CPE UEN: 201829481E) under the Private Education Act (Cap 247A). We hold an active 4-Year EduTrust Certification. Furthermore, our eligible professional programmes are approved by SkillsFuture Singapore (SSG) for government funding, Mid-Career Enhanced Subsidies (MCES), and NTUC UTAP union co-funding."
         ),
         (
             "[INTENT: subsidy_sc40_calculation]",
@@ -850,32 +860,32 @@ def generate_pdf(output_path, data):
         (
             "[INTENT: subsidy_pr_international]",
             "Q3: Can Permanent Residents (PRs) or international applicants receive funding?",
-            "Singapore Permanent Residents (PRs) receive up to a 30% baseline course fee subsidy from SkillsFuture Singapore. PRs who are NTUC union members can also claim up to S$250/year in UTAP co-funding. International applicants pay the standard unsubsidized tuition fee in Singapore Dollars (SGD), protected 100% under our Lonpac Insurance Fee Protection Scheme (FPS)."
+            "Singapore Permanent Residents (PRs) receive up to a 30% baseline course fee subsidy from SkillsFuture Singapore. PRs who are NTUC union members can also claim up to S$250/year in UTAP co-funding. International applicants pay the standard unsubsidized tuition fee in Singapore Dollars (SGD), protected 100% under our Fee Protection Scheme (FPS)."
         ),
         (
             "[INTENT: refund_policy_withdrawal]",
             "Q4: What happens if I register and then need to cancel or withdraw? (Refund Policy)",
-            "Under the CPE Standard PEI-Student Contract, you are protected by a mandatory 7-working-days cooling-off period from contract signing, during which you receive a 100% refund of course fees paid. If you withdraw >= 30 days before class starts, you receive an 80% refund; if between 1 to 29 days before, you receive a 50% refund. If the Institute ever fails to commence a course, 100% of all fees are refunded within 7 working days."
+            "Under the CPE Standard PEI-Student Contract, you are protected by a mandatory 7-working-days cooling-off period from contract signing, during which you receive a 100% refund of course fees paid. If you withdraw >= 30 days before class starts, you receive an 80% refund; if between 1 to 29 days before, you receive a 50% refund. If the University ever fails to commence a course, 100% of all fees are refunded within 7 working days."
         ),
         (
             "[INTENT: fee_protection_insurance]",
             "Q5: Are my course tuition fees safe if the institute faces financial difficulty?",
-            "Yes, completely safe. Under Singapore law and CPE regulations, Apex Institute maintains a mandatory Fee Protection Scheme (FPS) with Lonpac Insurance Bhd. Every dollar of your tuition fee is insured against insolvency or school closure from the date of payment until course graduation."
+            "Yes, completely safe. Under Singapore law and CPE regulations, Dagsis University Dummy maintains a mandatory Fee Protection Scheme (FPS) with an appointed licensed insurance underwriter. Every dollar of your tuition fee is insured against insolvency or school closure from the date of payment until course graduation."
         ),
         (
             "[INTENT: trial_class_reservation]",
             "Q6: Can I attend a trial class before enrolling in a full programme?",
-            "Yes! We offer complimentary diagnostic masterclasses and curriculum consultations across all 10 Singapore campuses. Trial classes cap outside attendees at 2–5 seats to preserve seminar quality. You can reserve your seat directly with me by providing your name, email, phone number, and preferred campus."
+            "Yes! We offer complimentary diagnostic masterclasses and curriculum consultations across all our Singapore campuses. Trial classes cap outside attendees at 2–5 seats to preserve seminar quality. You can reserve your seat directly with me by providing your name, email, phone number (+65 XXXXXXXXX), and preferred campus."
         ),
         (
             "[INTENT: campus_operating_hours]",
             "Q7: Where are your campuses located and what are their operating hours?",
-            "We have 10 executive campuses directly linked to major MRT stations across Singapore: Somerset (TripleOne Somerset #10-01), Jurong East, Tampines, Bishan, Woodlands, Orchard, Marina Bay, Novena, Bugis, and Clementi. Admissions offices operate Mondays through Fridays 09:00 to 18:00 SGT, and Saturdays 09:00 to 13:00 SGT."
+            "Our Principal Campus & Headquarters is located at 123, Street ABC, State XYZ, Pin-000000. We also operate regional campus centres directly linked to major MRT stations across Singapore. Admissions offices operate Mondays through Fridays 09:00 to 18:00 SGT, and Saturdays 09:00 to 13:00 SGT."
         ),
         (
             "[INTENT: sfc_portal_claim_steps]",
             "Q8: How do I claim my SkillsFuture Credit for my course?",
-            "First, submit your course application with Apex Institute to receive your official Registry Letter and fee schedule. Next, log in to www.myskillsfuture.gov.sg using your Singpass, search for 'Apex Institute', select your course code (e.g. CR006), upload your invoice, and authorize the credit deduction. The government pays the credit directly to Apex Institute."
+            "First, submit your course application with Dagsis University Dummy to receive your official Registry Letter and fee schedule. Next, log in to www.myskillsfuture.gov.sg using your Singpass, search for 'Dagsis University Dummy', select your course code (e.g. CR006), upload your invoice, and authorize the credit deduction. The government pays the credit directly to Dagsis University Dummy."
         ),
         (
             "[INTENT: attendance_regulations]",
@@ -884,18 +894,18 @@ def generate_pdf(output_path, data):
         ),
         (
             "[INTENT: certificate_verification_employer]",
-            "Q10: How can my employer verify the certificate I earn from Apex Institute?",
-            "All certificates feature a cryptographic verification code (e.g., SG-APX-1000). Employers or academic admissions boards can visit our official portal at apex.edu.sg/certifications, enter the credential code, and receive instant verification of your award title, graduation standing, and date of conferral."
+            "Q10: How can my employer verify the certificate I earn from Dagsis University Dummy?",
+            "All certificates feature a cryptographic verification code (e.g., SG-APX-1000). Employers or academic admissions boards can visit our official portal at dagsis.edu.sg/certifications, enter the credential code, and receive instant verification of your award title, graduation standing, and date of conferral."
         ),
         (
             "[INTENT: installment_payment_options]",
             "Q11: Can I pay in interest-free monthly installments?",
-            "Yes. For self-funded portions not covered by SkillsFuture or UTAP, we offer 0% interest installment payment plans over 6 or 12 months with major Singapore banks (DBS/POSB, OCBC, UOB). In accordance with CPE rules, no fees exceeding 12 months in advance are ever collected."
+            "Yes. For self-funded portions not covered by SkillsFuture or UTAP, we offer 0% interest installment payment plans over 6 or 12 months with major Singapore retail banks. In accordance with CPE rules, no fees exceeding 12 months in advance are ever collected."
         ),
         (
             "[INTENT: delivery_format_options]",
             "Q12: What learning formats do you offer for working adults?",
-            "We offer four flexible delivery modes: 1) Executive Hybrid (bi-weekly Saturday physical seminars + online modules), 2) Live Online Synchronous (interactive evening Zoom classes), 3) On-Campus In-Person Seminars, and 4) Weekend Intensive Cohorts. You can switch formats during term breaks upon approval by the Registrar."
+            "We offer four flexible delivery modes: 1) Executive Hybrid (bi-weekly physical seminars + online modules), 2) Live Interactive Virtual Seminars, 3) On-Campus In-Person Seminars, and 4) Weekend Intensive Cohorts. You can switch formats during term breaks upon approval by the Registrar."
         ),
         (
             "[INTENT: teacher_student_ratio]",
@@ -915,7 +925,7 @@ def generate_pdf(output_path, data):
         (
             "[INTENT: corporate_group_training]",
             "Q16: Do you provide corporate group training and Skills Development Fund (SDF) absentee payroll?",
-            "Yes. We support corporate enterprises and statutory boards with bespoke cohort upskilling. Companies claiming absentee payroll and Skills Development Fund (SDF) subsidies can register through our Corporate Enterprise Desk (executive@apex.edu.sg) for consolidated corporate e-invoicing via Vendors@Gov."
+            "Yes. We support corporate enterprises and statutory boards with bespoke cohort upskilling. Companies claiming absentee payroll and Skills Development Fund (SDF) subsidies can register through our Corporate Enterprise Desk (executive@dagsis.edu.sg) for consolidated corporate electronic invoicing."
         ),
     ]
 
@@ -938,13 +948,13 @@ def generate_pdf(output_path, data):
 
     system_prompt_text = (
         "&lt;system_prompt&gt;<br/>"
-        "You are the Official AI Academic & Admissions Counselor for Apex Institute of Singapore.<br/>"
+        "You are the Official AI Academic & Admissions Counselor for Dagsis University Dummy.<br/>"
         "Your role is to assist prospective students, working professionals, and parents with course recommendations, "
         "SkillsFuture subsidy calculations, campus directions, and trial class bookings.<br/><br/>"
         "CORE PERSONA & TONE:<br/>"
         "- Tone: Professional, authoritative, warm, institutional, and transparent.<br/>"
         "- Standard Currency: Always quote tuition and fees in Singapore Dollars (SGD, S$).<br/>"
-        "- Statutory Accreditation: Emphasize that Apex Institute is CPE Registered (UEN: 201829481E) and EduTrust 4-Year certified.<br/><br/>"
+        "- Statutory Accreditation: Emphasize that Dagsis University Dummy is CPE Registered (UEN: 201829481E) and EduTrust 4-Year certified.<br/><br/>"
         "MANDATORY BEHAVIORAL GUARDRAILS:<br/>"
         "1. FEE & SUBSIDY ACCURACY:<br/>"
         "   - For Singapore Citizens 40+: Apply up to 70% SSG Mid-Career Enhanced Subsidy (MCES).<br/>"
@@ -953,14 +963,14 @@ def generate_pdf(output_path, data):
         "   - For NTUC union members: Highlight UTAP 50% unfunded fee co-funding up to S$250/year (or S$500 for age 40+).<br/>"
         "   - Never quote unapproved custom discounts.<br/>"
         "2. STUDENT PROTECTION DISCLAIMER:<br/>"
-        "   - Always clarify that fees are 100% protected under the Lonpac Insurance Fee Protection Scheme (FPS).<br/>"
+        "   - Always clarify that fees are 100% protected under the mandatory Fee Protection Scheme (FPS).<br/>"
         "   - Mention the 7-day cooling-off period under the CPE Standard PEI-Student Contract when users inquire about refunds.<br/>"
         "3. TRIAL CLASS PROTOCOL:<br/>"
         "   - When a user asks about trials, offer to book an instant complimentary diagnostic seminar.<br/>"
-        "   - Collect: Full Name, Email, Singapore Mobile Number, Target Course ID, and Preferred Campus.<br/>"
+        "   - Collect: Full Name, Email, Singapore Mobile Number (+65 XXXXXXXXX), Target Course ID, and Preferred Campus.<br/>"
         "4. ESCALATION PROTOCOL:<br/>"
         "   - For disputes, credit exemptions, or corporate contracts, direct the user to the Senior Admissions Registry:<br/>"
-        "     Hotline: +65 6732 8888 (Mon-Fri 09:00-18:00 SGT) | WhatsApp: +65 8299 1234 | Email: admissions@apex.edu.sg<br/>"
+        "     Address: 123, Street ABC, State XYZ, Pin-000000 | Hotline: +65 XXXXXXXXX (Mon-Fri 09:00-18:00 SGT) | WhatsApp: +65 XXXXXXXXX | Email: admissions@dagsis.edu.sg<br/>"
         "&lt;/system_prompt&gt;"
     )
 
@@ -984,11 +994,11 @@ def generate_pdf(output_path, data):
     
     contacts_matrix = [
         [Paragraph("Department / Desk", table_header_style), Paragraph("Scope of Assistance", table_header_style), Paragraph("Telephone Hotline", table_header_style), Paragraph("Electronic Correspondence", table_header_style)],
-        [Paragraph("Office of the Registrar", table_cell_bold), Paragraph("Matriculation, student contracts, transcripts, verification", table_cell_style), Paragraph("+65 6732 8888", table_cell_style), Paragraph("registrar@apex.edu.sg", table_cell_style)],
-        [Paragraph("Admissions Counseling", table_cell_bold), Paragraph("Course selection, prerequisites, campus visits, trials", table_cell_style), Paragraph("+65 6732 8888 / WhatsApp +65 8299 1234", table_cell_style), Paragraph("admissions@apex.edu.sg", table_cell_style)],
-        [Paragraph("Finance & Grants Desk", table_cell_bold), Paragraph("SkillsFuture Credit claims, UTAP, GIRO, PSEA, FPS insurance", table_cell_style), Paragraph("+65 6732 8889", table_cell_style), Paragraph("finance@apex.edu.sg", table_cell_style)],
-        [Paragraph("Corporate Learning Desk", table_cell_bold), Paragraph("Enterprise cohort upskilling, SDF absentee payroll billing", table_cell_style), Paragraph("+65 6338 1200", table_cell_style), Paragraph("executive@apex.edu.sg", table_cell_style)],
-        [Paragraph("Quality Assurance Council", table_cell_bold), Paragraph("Student dispute mediation, academic board appeals, CPE ERF", table_cell_style), Paragraph("+65 6732 8891", table_cell_style), Paragraph("academicboard@apex.edu.sg", table_cell_style)],
+        [Paragraph("Office of the Registrar", table_cell_bold), Paragraph("Matriculation, student contracts, transcripts, verification", table_cell_style), Paragraph("+65 XXXXXXXXX", table_cell_style), Paragraph("registrar@dagsis.edu.sg", table_cell_style)],
+        [Paragraph("Admissions Counseling", table_cell_bold), Paragraph("Course selection, prerequisites, campus visits, trials", table_cell_style), Paragraph("+65 XXXXXXXXX / WhatsApp +65 XXXXXXXXX", table_cell_style), Paragraph("admissions@dagsis.edu.sg", table_cell_style)],
+        [Paragraph("Finance & Grants Desk", table_cell_bold), Paragraph("SkillsFuture Credit claims, UTAP, GIRO, PSEA, FPS insurance", table_cell_style), Paragraph("+65 XXXXXXXXX", table_cell_style), Paragraph("finance@dagsis.edu.sg", table_cell_style)],
+        [Paragraph("Corporate Learning Desk", table_cell_bold), Paragraph("Enterprise cohort upskilling, SDF absentee payroll billing", table_cell_style), Paragraph("+65 XXXXXXXXX", table_cell_style), Paragraph("executive@dagsis.edu.sg", table_cell_style)],
+        [Paragraph("Quality Assurance Council", table_cell_bold), Paragraph("Student dispute mediation, academic board appeals, CPE ERF", table_cell_style), Paragraph("+65 XXXXXXXXX", table_cell_style), Paragraph("academicboard@dagsis.edu.sg", table_cell_style)],
     ]
     t_contacts = Table(contacts_matrix, colWidths=[110, 155, 125, printable_width - 390])
     t_contacts.setStyle(TableStyle([
@@ -1004,7 +1014,8 @@ def generate_pdf(output_path, data):
     story.append(Spacer(1, 12))
 
     story.append(Paragraph(
-        "<b>OFFICIAL LEGAL DISCLAIMER:</b> This knowledge base is registered with the Academic Board of Apex Institute of Singapore. "
+        "<b>OFFICIAL LEGAL DISCLAIMER:</b> This knowledge base is registered with the Academic Board of Dagsis University Dummy. "
+        "Principal Address: 123, Street ABC, State XYZ, Pin-000000 | Hotline: +65 XXXXXXXXX | Email: admissions@dagsis.edu.sg. "
         "All terms herein comply with the Private Education Act (Cap 247A) and the Consumer Protection (Fair Trading) Act (CPFTA). "
         "Last audited and authenticated: Academic Year 2026-2027.",
         ParagraphStyle('LegalDiscl', fontName='Helvetica-Oblique', fontSize=7, leading=9.5, textColor=c_muted)
@@ -1022,8 +1033,16 @@ if __name__ == "__main__":
     data = load_data()
     print(f"Loaded: {len(data['courses'])} courses, {len(data['campuses'])} campuses, {len(data['trainers'])} trainers, {len(data['certifications'])} certs.")
     
-    root_pdf = os.path.abspath("Apex_Institute_AI_Chatbot_Knowledge_Base.pdf")
-    generate_pdf(root_pdf, data)
+    # Generate Dagsis University Dummy PDFs
+    root_pdf_dgs = os.path.abspath("Dagsis_University_AI_Chatbot_Knowledge_Base.pdf")
+    generate_pdf(root_pdf_dgs, data)
     
-    public_pdf = os.path.abspath(os.path.join("public", "Apex_Institute_AI_Chatbot_Knowledge_Base.pdf"))
-    generate_pdf(public_pdf, data)
+    public_pdf_dgs = os.path.abspath(os.path.join("public", "Dagsis_University_AI_Chatbot_Knowledge_Base.pdf"))
+    generate_pdf(public_pdf_dgs, data)
+
+    # Also generate the original filename for backward compatibility
+    root_pdf_apx = os.path.abspath("Apex_Institute_AI_Chatbot_Knowledge_Base.pdf")
+    generate_pdf(root_pdf_apx, data)
+    
+    public_pdf_apx = os.path.abspath(os.path.join("public", "Apex_Institute_AI_Chatbot_Knowledge_Base.pdf"))
+    generate_pdf(public_pdf_apx, data)

@@ -6748,14 +6748,14 @@ export const trainers: Trainer[] = [
     "specialization": "Artificial Intelligence",
     "display_name": "Trainer 7 (Rajesh Nair)",
     "full_name": "Rajesh Nair",
-    "title": "MTech Artificial Intelligence (NUS), Google Developer Expert",
-    "bio": "Deep learning practitioner with focus on computer vision and LLM fine-tuning. Consulted for top Southeast Asian banks and tech unicorns.",
+    "title": "MTech Artificial Intelligence, Senior AI Systems Architect",
+    "bio": "Deep learning practitioner with focus on computer vision and LLM fine-tuning. Consulted for top technology institutions.",
     "photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=500&q=80",
     "rating": "4.91",
     "students_count": 632,
     "qualifications": [
-      "MTech Artificial Intelligence (NUS)",
-      "Google Developer Expert"
+      "MTech Artificial Intelligence",
+      "Senior AI Systems Architect"
     ],
     "courses_taught": [
       "CR007",
@@ -6817,13 +6817,13 @@ export const trainers: Trainer[] = [
     "specialization": "Cloud Computing",
     "display_name": "Trainer 10 (Kelvin Ho)",
     "full_name": "Kelvin Ho",
-    "title": "AWS Hero & Google Cloud Certified Fellow",
+    "title": "Enterprise Cloud Solutions Architect",
     "bio": "Solutions architect who has migrated multi-million dollar banking workloads to Kubernetes and serverless cloud architectures.",
     "photo": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=500&q=80",
     "rating": "4.94",
     "students_count": 773,
     "qualifications": [
-      "AWS Hero & Google Cloud Certified Fellow"
+      "Enterprise Cloud Solutions Architect"
     ],
     "courses_taught": [
       "CR010",
@@ -6839,14 +6839,14 @@ export const trainers: Trainer[] = [
     "specialization": "Digital Marketing",
     "display_name": "Trainer 11 (Audrey Sim)",
     "full_name": "Audrey Sim",
-    "title": "MBA (INSEAD), Ex-Meta Growth Strategist",
+    "title": "MBA, Senior Enterprise Growth Strategist",
     "bio": "Performance marketing maestro having managed $20M+ in digital ad spend across APAC. Teaches omnichannel data-driven growth.",
     "photo": "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=500&q=80",
     "rating": "4.95",
     "students_count": 820,
     "qualifications": [
-      "MBA (INSEAD)",
-      "Ex-Meta Growth Strategist"
+      "MBA",
+      "Senior Enterprise Growth Strategist"
     ],
     "courses_taught": [
       "CR011",
@@ -7010,14 +7010,14 @@ export const trainers: Trainer[] = [
     "specialization": "Power BI",
     "display_name": "Trainer 19 (Gavin Neo)",
     "full_name": "Gavin Neo",
-    "title": "Microsoft MVP (Data Platform), Power BI Champion",
+    "title": "Distinguished Data Platform Fellow, Power BI Specialist",
     "bio": "Author of enterprise DAX modeling frameworks. Trained finance and supply chain teams across multinational corporate headquarters in Singapore.",
     "photo": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80",
     "rating": "4.88",
     "students_count": 1196,
     "qualifications": [
-      "Microsoft MVP (Data Platform)",
-      "Power BI Champion"
+      "Distinguished Data Platform Fellow",
+      "Power BI Specialist"
     ],
     "courses_taught": [
       "CR019",
@@ -7159,14 +7159,14 @@ export const trainers: Trainer[] = [
     "specialization": "Data Analytics",
     "display_name": "Trainer 26 (Tan Zhi Wei)",
     "full_name": "Tan Zhi Wei",
-    "title": "Head of Analytics (FinTech), BEng (NTU)",
+    "title": "Head of Analytics & Data Systems, BEng",
     "bio": "Builds customer propensity and fraud prediction models. Mentor for junior data analysts seeking high-yield career pivots.",
     "photo": "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=500&q=80",
     "rating": "4.95",
     "students_count": 1525,
     "qualifications": [
-      "Head of Analytics (FinTech)",
-      "BEng (NTU)"
+      "Head of Analytics & Data Systems",
+      "BEng"
     ],
     "courses_taught": [
       "CR026",
@@ -7204,7 +7204,7 @@ export const trainers: Trainer[] = [
     "display_name": "Trainer 28 (Felix Wong)",
     "full_name": "Felix Wong",
     "title": "Senior ML Engineer, MSc Computer Science",
-    "bio": "Specialist in recommendation engines and production ML pipelines using MLflow, Kubeflow, and AWS SageMaker.",
+    "bio": "Specialist in recommendation engines and production ML pipelines using MLflow, Kubeflow, and cloud ML architectures.",
     "photo": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=500&q=80",
     "rating": "4.97",
     "students_count": 419,
@@ -7938,7 +7938,7 @@ export const certifications: Certification[] = [
   {
     "certification_id": "CERT019",
     "name": "Certification 19",
-    "industry_title": "Microsoft Certified Power BI Data Analyst Associate",
+    "industry_title": "Certified Professional Power BI Data Analyst Associate",
     "category": "IGCSE Programme",
     "issuing_body": "Dagsis University Dummy in partnership with Singapore Industry Boards",
     "verification_code": "SG-APX-1846",
@@ -7954,7 +7954,7 @@ export const certifications: Certification[] = [
   {
     "certification_id": "CERT020",
     "name": "Certification 20",
-    "industry_title": "ISTQB Certified Quality & Test Automation Engineer",
+    "industry_title": "Certified Quality & Test Automation Engineer",
     "category": "Power BI",
     "issuing_body": "Dagsis University Dummy in partnership with Singapore Industry Boards",
     "verification_code": "SG-APX-1893",
